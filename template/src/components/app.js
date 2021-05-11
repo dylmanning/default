@@ -1,21 +1,22 @@
-import { h } from 'preact';
-import { Router } from 'preact-router';
+import { h } from 'preact'
+import { Router } from 'preact-router'
+import { connect } from 'unistore/preact'
 
-import Header from './header';
+import { actions } from 'components/store.js'
+import Header from 'components/header'
 
-// Code-splitting is automated for `routes` directory
-import Home from '../routes/home';
-import Profile from '../routes/profile';
+import Home from 'routes/home'
+import Profile from 'routes/profile'
 
 const App = () => (
-	<div id="app">
-		<Header />
-		<Router>
-			<Home path="/" />
-			<Profile path="/profile/" user="me" />
-			<Profile path="/profile/:user" />
-		</Router>
-	</div>
+  <div>
+    <Header />
+    <Router>
+      <Home path="/" />
+      <Profile path="/profile/" user="me" />
+      <Profile path="/profile/:user" />
+    </Router>
+  </div>
 )
 
-export default App;
+export default connect([], actions)(App)
