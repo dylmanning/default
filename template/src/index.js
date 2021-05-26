@@ -1,7 +1,7 @@
 import 'style'
 import { Provider } from 'unistore/preact'
 
-import { store } from 'components/store.js'
+import { store } from 'components/store'
 import App from 'components/app'
 
 const Entry = () => (

@@ -5,7 +5,8 @@
       "components/*": ["src/components/*"],
       "routes/*": ["src/routes/*"],
       "lib/*": ["src/lib/*"],
-      "assets/*": ["src/assets/*"]
+      "assets/*": ["src/assets/*"],
+      "static/*": ["src/static/*"]
     }
   },
   "include": ["src"],
