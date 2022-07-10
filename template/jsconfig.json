@@ -2,13 +2,34 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "components/*": ["src/components/*"],
-      "routes/*": ["src/routes/*"],
-      "lib/*": ["src/lib/*"],
-      "assets/*": ["src/assets/*"],
-      "static/*": ["src/static/*"]
+      "components/*": [
+        "src/components/*"
+      ],
+      "services/*": [
+        "src/services/*"
+      ],
+      "assets/*": [
+        "src/assets/*"
+      ],
+      "static/*": [
+        "src/static/*"
+      ],
+      "routes/*": [
+        "src/routes/*"
+      ],
+      "store": [
+        "src/store.js"
+      ],
+      "app": [
+        "src/app.js"
+      ]
     }
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "build"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "build"
+  ]
 }

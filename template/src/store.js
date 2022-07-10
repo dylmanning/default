@@ -2,14 +2,11 @@ import createStore from 'unistore'
 import persistStore from 'unissist'
 import localStoreAdapter from 'unissist/integrations/localStorageAdapter'
 
-const storeModel = {}
+export { connect } from 'unistore/preact'
 
-const adapter = localStoreAdapter('app')
-export const store = createStore(storeModel)
+export const store = createStore({})
 
-persistStore(store, adapter)
-
-export const actions = () => ({
+export const actions = store => ({
 
   set: (state, key, value) => {
     return {
@@ -19,3 +16,6 @@ export const actions = () => ({
   }
 
 })
+
+persistStore(store, localStoreAdapter('app'))
+

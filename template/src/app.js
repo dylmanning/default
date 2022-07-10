@@ -1,14 +1,13 @@
-import { h } from 'preact'
 import { Router } from 'preact-router'
-import { connect } from 'unistore/preact'
 
-import { actions } from 'components/store.js'
-import Header from 'components/header'
+import { connect, actions } from '@store'
 
 import Home from 'routes/home'
 import Profile from 'routes/profile'
 
-const App = () => (
+import Header from 'components/header'
+
+export default connect([], actions)(() => (
   <div>
     <Header />
     <Router>
@@ -17,6 +16,4 @@ const App = () => (
       <Profile path="/profile/:user" />
     </Router>
   </div>
-)
-
-export default connect([], actions)(App)
+))
